@@ -1,0 +1,40 @@
+@use "../global/forwards" as fw;
+
+.l-location__background-img{
+  background-image: url(../../img/location.jpg);
+}
+
+.l-location{
+  position: relative;
+  .section-sub-title{
+    margin-bottom: 70px;
+  }
+}
+
+.google-map{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+
+  margin-bottom: 20px;
+}
+
+.l-location__information{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@include fw.mq("sp"){
+  .l-location{
+    margin-bottom: 80px;
+
+    .section-sub-title{
+      padding-top: 30px;
+      margin-bottom: 25px;
+    }
+  }
+}

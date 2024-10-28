@@ -1,0 +1,82 @@
+@use "../global/forwards" as fw;
+
+.l-about__background-img{
+  background-image: url(../../img/about.jpg);
+}
+
+.l-about{
+  position: relative;
+  
+  .section-sub-title{
+    margin-bottom: 90px;
+  }
+}
+
+.l-about__text-area{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 40px;
+
+  margin-bottom: 60px;
+
+  .l-about__text{
+    text-align: left;
+    line-height: 2;
+  }
+}
+
+.l-about__more-link::before, .l-about__more-link::after {
+  content: '';
+	width: 32px;
+	height: 25px;
+	position: absolute;
+}
+
+.l-about__more-link:hover::before, .l-about__more-link:hover::after {
+	width: 100%;
+	height: 100%;
+  transition: .7s;
+}
+
+.l-about__more-link::before {
+	border-left: 1px solid fw.$red;
+	border-top: 1px solid fw.$red;
+	top: 0;
+	left: 0;
+}
+
+.l-about__more-link{
+  padding: 16px 44px;
+  display: inline-block;
+  position: relative;
+}
+
+.l-about__more-link::after {
+	border-right: 1px solid fw.$red;
+	border-bottom: 1px solid fw.$red;
+	bottom: 0;
+	right: 0;
+}
+
+@include fw.mq("sp"){
+  .l-about{
+
+
+    .section-sub-title{
+      padding-top: 30px;
+      margin-bottom: 35px;
+    }
+
+    .wrapper{
+      padding-bottom: 80px;
+    }
+  }
+  
+  .l-about__text-area{
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    margin-bottom: 50px;
+  }
+}

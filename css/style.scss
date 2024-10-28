@@ -1,0 +1,30 @@
+@charset "UTF-8";
+// ===============================================================
+// use
+// ===============================================================
+
+// foundationフォルダ
+// リセットCSS
+@use "../scss/foundation/reset";
+// ベースとなるCSS
+@use "../scss/foundation/base";
+
+// layoutフォルダ
+// ヘッダーCSS
+@use "../scss/layout/l-header";
+// フッターCSS
+@use "../scss/layout/l-footer";
+// メインビジュアルCSS
+@use "../scss/layout/l-main-visual";
+// メインーCSS
+@use "../scss/layout/l-menu";
+// アバウトCSS
+@use "../scss/layout/l-about";
+// ロケーションCSS
+@use "../scss/layout/l-location";
+
+// componentフォルダ
+// 見出しCSS
+@use "../scss/object/component/c-headline";
+// パララックスCSS
+@use "../scss/object/component/c-parallax";

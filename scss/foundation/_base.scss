@@ -1,0 +1,56 @@
+// common
+@use "../global/forwards" as fw;
+
+
+body{
+    font-family: "Helvetica Neue",Arial,"Hiragino Sans","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+    color: fw.$black;
+    z-index: 1;
+
+    font-size: 14.4px;
+    line-height: 1.7;
+    position: relative;
+    text-align: center;
+}
+
+iframe{
+    display: block;
+}
+
+.container{
+    width: 100vw;
+    background-color: fw.$white;
+}
+
+.wrapper{
+    max-width: 1000px;
+    padding: 90px 16px 170px;
+    margin: 0 auto;
+}
+
+.background-img-area{
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 230px;
+    clip-path: inset(0); /* 切り抜き */
+    z-index: -1;
+}
+
+.background-img__fixed{
+    position: fixed; /* 背景を固定 */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+@include fw.mq("sp"){
+    .wrapper{
+        padding: 0 16px;
+    }
+        
+}

@@ -1,0 +1,37 @@
+@use "../../global/forwards" as fw;
+
+.site-title{
+  height: 100%;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(1px 1px 2px fw.$white);
+}
+
+
+.section-title{
+  height: 300px;
+  color: fw.$white;
+  font-size: fw.$h2;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  text-shadow: 1px 1px 2px fw.$white;
+}
+
+.section-sub-title{
+  font-weight: bold;
+  font-size: fw.$h3;
+  border-bottom: 6px solid fw.$red;
+  display: inline-block;
+}
+
+@include fw.mq("sp"){
+  .section-title{
+    height: 94px;
+    font-size: fw.$sp-h2;
+  }
+  
+  .section-sub-title{
+    font-size: fw.$sp-h3;
+  }
+}

@@ -1,0 +1,136 @@
+@use "../global/forwards" as fw;
+
+.l-header{
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.l-header__nav{
+  display: block;
+}
+
+.l-header__ul{
+  display: flex;
+  gap: 30px;
+}
+
+.l-header__ul__li{
+  font-weight: bold;
+  color: fw.$white;
+}
+
+.l-header__ul__li a{
+  position: relative;
+  z-index: 10;
+  text-shadow: 1px 1px 2px #121212;
+}
+
+
+@include fw.mq("sp"){
+
+  .l-header__nav{
+    position: fixed;
+    right: -350px;
+    top: 0;
+    padding-top: 80px;
+    width: 300px;
+    height: 100vh;
+    background-color: fw.$white;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto;
+  }
+
+  .l-header__ul{
+    display: block;
+  }
+
+  .l-header__ul__li{
+    padding: 8px 0;
+  }
+
+  .l-header__ul__li a{
+    text-shadow: none;
+    display: inline-block;
+    border-bottom: 3px solid fw.$red;
+    color: fw.$black;
+
+    .l-header__ul__li a:hover{
+      background-color: fw.$gray;
+    }
+  }
+
+
+  .hamburger{
+    display: block;
+    position: fixed;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 300;
+  }
+
+  .hamburger_border{
+    position: fixed;
+    width: 18px;
+    height: 2px;
+    background-color: fw.$black;
+    transition: all .6s;
+  }
+
+  .hamburger_border_top {
+    top: 14px;
+  }
+  .hamburger_border_center {
+    top: 20px;
+  }
+  .hamburger_border_bottom {
+    top: 26px;
+  }
+
+  .black_background{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: fw.$black;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+
+
+  .nav-open{
+    .l-header__nav{
+      right: 0;
+    }
+
+    .black_background{
+      opacity: .8;
+      visibility: visible;
+    }
+
+    .hamburger_border{
+      background-color: fw.$black;
+    }
+
+    .hamburger_border_top {
+      transform: rotate(45deg);
+      top: 20px;
+    }
+    .hamburger_border_center {
+      opacity: 0;
+    }
+    .hamburger_border_bottom {
+      transform: rotate(-45deg);
+      top: 20px;
+    }
+  }
+}

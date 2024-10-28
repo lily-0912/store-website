@@ -1,0 +1,6 @@
+@use "../global/forwards" as fw;
+
+.l-footer{
+  font-size: fw.$small;
+  margin-bottom: 10px;
+}

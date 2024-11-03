@@ -23,9 +23,12 @@
 
 .l-location__information{
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 10px;
+}
+.l-location-text {
+  margin-bottom: 10px;
 }
 
 @include fw.mq("sp"){

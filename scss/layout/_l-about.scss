@@ -31,12 +31,12 @@
 	width: 32px;
 	height: 25px;
 	position: absolute;
+  transition: .7s;
 }
 
 .l-about__more-link:hover::before, .l-about__more-link:hover::after {
 	width: 100%;
 	height: 100%;
-  transition: .7s;
 }
 
 .l-about__more-link::before {
